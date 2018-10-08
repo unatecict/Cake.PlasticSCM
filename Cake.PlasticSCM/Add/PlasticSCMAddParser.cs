@@ -4,11 +4,13 @@ using System.Collections.Generic;
 namespace Cake.PlasticSCM.Add
 {
     internal class PlasticSCMAddParser
-    {   
+    {
+        internal static string SEPARATOR_CHAR = "$$$";
+
         public static PlasticSCMAddResult Parse(IEnumerable<string> output)
         {
             PlasticSCMAddResult result = new PlasticSCMAddResult();
-            string[] splitChars = new string[] {"\t"};
+            string[] splitChars = new string[] { SEPARATOR_CHAR };
 
             foreach (string line in output)
             {

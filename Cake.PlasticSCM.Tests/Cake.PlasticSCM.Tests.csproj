@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ResultFiles\add_mixedresult.txt" />
     <None Remove="ResultFiles\checkin_done.txt" />
     <None Remove="ResultFiles\checkin_merge_needed.txt" />
     <None Remove="ResultFiles\find_attribute.xml" />
@@ -24,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="ResultFiles\add_mixedresult.txt" />
     <EmbeddedResource Include="ResultFiles\checkin_merge_needed.txt" />
     <EmbeddedResource Include="ResultFiles\checkin_done.txt" />
     <EmbeddedResource Include="ResultFiles\find_review.xml" />

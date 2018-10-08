@@ -1,0 +1,4 @@
+﻿The selected items are about to be added. Please wait ...
+ERR$$$e:\Pruebas\Unatec.UF.MGAReloaded\build\other\last_result.json
+OK$$$e:\Pruebas\Unatec.UF.MGAReloaded\build\other\asdasd123.txt
+Item e:\Pruebas\Unatec.UF.MGAReloaded\build\other\last_result.json cannot be added. Error: The item /build/other/last_result.json already exists!.

@@ -14,8 +14,8 @@ namespace Cake.PlasticSCM.Add
             IProcessRunner processRunner, IToolLocator tools, ICakeLog log) : base(fileSystem, environment, processRunner, tools,
             "add", log)
         {
-            FormatStrings.Add("format","OK\t{0}");
-            FormatStrings.Add("errorformat","ERR\t{0}");
+            FormatStrings.Add("format","OK" + PlasticSCMAddParser.SEPARATOR_CHAR + "{0}");
+            FormatStrings.Add("errorformat", "ERR" + PlasticSCMAddParser.SEPARATOR_CHAR + "{0}");
         }
 
         public PlasticSCMAddResult Add(PlasticSCMAddSettings settings)
