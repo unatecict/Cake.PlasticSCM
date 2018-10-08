@@ -1,0 +1,15 @@
+﻿<PLASTICQUERY>
+  <MARKER>
+    <ID>110</ID>
+    <COMMENT>Label comment</COMMENT>
+    <DATE>2018-08-22T14:53:25</DATE>
+    <OWNER>ruben.ruiz</OWNER>
+    <NAME>A label</NAME>
+    <CHANGESET>9</CHANGESET>
+    <REPOSITORY>Test</REPOSITORY>
+    <REPNAME>Test</REPNAME>
+    <REPSERVER>plastic1:8087</REPSERVER>
+    <BRANCH>/main/asdad</BRANCH>
+    <BRANCHID>42</BRANCHID>
+  </MARKER>
+</PLASTICQUERY>

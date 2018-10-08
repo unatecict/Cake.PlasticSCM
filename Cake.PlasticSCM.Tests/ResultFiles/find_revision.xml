@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PLASTICQUERY>
+
+  <REVISION>
+    <ID>12</ID>
+    <COMMENT>Rev comment</COMMENT>
+    <DATE>2018-08-20T18:18:43</DATE>
+    <OWNER>ruben.ruiz</OWNER>
+    <TYPE>txt</TYPE>
+    <SIZE>7</SIZE>
+    <CHANGESET>1</CHANGESET>
+    <PARENT>-1</PARENT>
+    <ITEM>e:\Proyectos\TestPlastic\f1_new</ITEM>
+    <ITEMID>17</ITEMID>
+    <BRANCH>br:/main</BRANCH>
+    <PATH>e:\Proyectos\TestPlastic\f1_new</PATH>
+    <REPOSITORY>Test</REPOSITORY>
+    <REPNAME>Test</REPNAME>
+    <REPSERVER>plastic1:8087</REPSERVER>
+    <HASH>91/k7YfME23I1kO0x319CA==</HASH>
+  </REVISION>
+</PLASTICQUERY>

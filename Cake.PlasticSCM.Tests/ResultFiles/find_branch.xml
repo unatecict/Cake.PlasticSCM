@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PLASTICQUERY>
+  <BRANCH>
+    <ID>3</ID>
+    <COMMENT>main branch</COMMENT>
+    <DATE>2018-08-28T17:48:29</DATE>
+    <OWNER>ruben.ruiz</OWNER>
+    <NAME>/main</NAME>
+    <PARENT></PARENT>
+    <REPOSITORY>Test</REPOSITORY>
+    <REPNAME>Test</REPNAME>
+    <REPSERVER>plastic1:8087</REPSERVER>
+    <TYPE>T</TYPE>
+    <CHANGESET>11</CHANGESET>
+  </BRANCH>
+</PLASTICQUERY>

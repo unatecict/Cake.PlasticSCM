@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<StatusOutput>
+  <WorkspaceStatus>
+    <Status>
+      <RepSpec>
+        <Server>plastic1:8087</Server>
+        <Name>Cake.PlasticSCM</Name>
+      </RepSpec>
+      <Changeset>123</Changeset>
+    </Status>
+  </WorkspaceStatus>
+  <Changes>
+    <Change>
+      <Type>PR</Type>
+      <Path>src</Path>
+      <MergesInfo />
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+    <Change>
+      <Type>AD</Type>
+      <Path>added</Path>
+      <MergesInfo />
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+    <Change>
+      <Type>LM</Type>
+      <Path>local moved</Path>
+      <MergesInfo />
+      <SimilarityPerUnit>0.95</SimilarityPerUnit>
+      <OldPath>f1</OldPath>
+    </Change>
+    <Change>
+      <Type>LD</Type>
+      <Path>local deleted</Path>
+      <MergesInfo />
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+    <Change>
+      <Type>CH</Type>
+      <Path>changed</Path>
+      <MergesInfo />
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+    <Change>
+      <Type>CO</Type>
+      <Path>checkout</Path>
+      <MergesInfo />
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+    <Change>
+      <Type>IG</Type>
+      <Path>ignored</Path>
+      <MergesInfo />
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+    <Change>
+      <Type>RP</Type>
+      <Path>replaced</Path>
+      <MergesInfo> (Merge de 6)</MergesInfo>
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+    <Change>
+      <Type>CP</Type>
+      <Path>copied</Path>
+      <MergesInfo> (Merge de 7)</MergesInfo>
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+    <Change>
+      <Type>MV</Type>
+      <Path>moved</Path>
+      <MergesInfo> (Merge de 9)</MergesInfo>
+      <SimilarityPerUnit>1</SimilarityPerUnit>
+      <OldPath>aaaa.txt</OldPath>
+    </Change>
+    <Change>
+      <Type>DE</Type>
+      <Path>deleted</Path>
+      <MergesInfo> (Merge de 11)</MergesInfo>
+      <SimilarityPerUnit>0</SimilarityPerUnit>
+      <OldPath />
+    </Change>
+  </Changes>
+</StatusOutput>

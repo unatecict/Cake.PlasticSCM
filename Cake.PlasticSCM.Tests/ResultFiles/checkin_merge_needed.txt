@@ -1,0 +1,3 @@
+﻿CI_START
+STAGE[$$]
+MERGE_NEEDED[$$]Se necesitan combinar los cambios del changeset cs:17@rep:Test@repserver:plastic1:8087(mount:/) con los cambios realizados sobre el changeset cs:9@rep:Test@repserver:plastic1:8087(mount:/) (changeset cargado en su workspace) antes de continuar. Es necesario resolver los conflictos mezclando los contenidos de su workspace con los últimos contenidos de la rama en la que está actualmente trabajando. Después de eso, reintente la operación de protección.[$$]17[$$]9[$$]Test[$$]plastic1:8087[$$]/

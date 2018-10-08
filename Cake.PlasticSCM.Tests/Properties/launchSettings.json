@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Cake.PlasticSCM.Tests": {
+      "commandName": "Project"
+    }
+  }
+}

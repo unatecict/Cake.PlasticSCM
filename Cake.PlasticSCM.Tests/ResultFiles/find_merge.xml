@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PLASTICQUERY>
+  <MERGE>
+    <ID>57</ID>
+    <DATE>2018-08-20T19:44:07</DATE>
+    <OWNER>ruben.ruiz</OWNER>
+    <TYPE>merge</TYPE>
+    <SRCID>53</SRCID>
+    <SRCCOMMENT>Source comment</SRCCOMMENT>
+    <SRCDATE>2018-08-20T19:41:00</SRCDATE>
+    <SRCOWNER>ruben.ruiz</SRCOWNER>
+    <SRCCHANGESET>7</SRCCHANGESET>
+    <SRCBRANCH>br:/main</SRCBRANCH>
+    <DSTID>56</DSTID>
+    <DSTCOMMENT>Destination comment</DSTCOMMENT>
+    <DSTDATE>2018-08-20T19:44:07</DSTDATE>
+    <DSTOWNER>ruben.ruiz</DSTOWNER>
+    <DSTCHANGESET>8</DSTCHANGESET>
+    <DSTBRANCH>br:/main/asdad</DSTBRANCH>
+    <BASEID>99</BASEID>
+    <BASECOMMENT>Base comement</BASECOMMENT>
+    <BASEDATE>2018-08-20T19:44:08</BASEDATE>
+    <BASEOWNER>ruben.ruiz</BASEOWNER>
+    <BASECHANGESET>123</BASECHANGESET>
+    <BASEBRANCH>br:/main</BASEBRANCH>
+    <SRC>br:/main@7</SRC>
+    <DST>br:/main/asdad@8</DST>
+  </MERGE>
+</PLASTICQUERY>  

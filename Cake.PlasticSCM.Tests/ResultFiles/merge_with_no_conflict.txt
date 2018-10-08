@@ -1,0 +1,2 @@
+﻿APPLY[$$]RM[$$]/aaaarg.txt
+DO_DELETED[$$]e:\Proyectos\TestPlastic\aaaarg.txt

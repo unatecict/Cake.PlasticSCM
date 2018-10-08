@@ -1,0 +1,4 @@
+﻿CI_START
+STAGE[$$]
+CO[$$]e:\Proyectos\TestPlastic\aaaarg.txt
+CHANGESET[$$]cs:17@br:/main/asdad@Test@plastic1:8087 (mount:'/')

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PLASTICQUERY>
+  <REVIEW>
+    <ID>114</ID>
+    <OWNER>ruben.ruiz</OWNER>
+    <DATE>2018-08-22T17:54:18</DATE>
+    <TITLE>Rev 1</TITLE>
+    <STATUS>Status0</STATUS>
+    <ASSIGNEE>Someone</ASSIGNEE>
+    <TARGETTYPE>ChangeSet</TARGETTYPE>
+    <TARGET>3</TARGET>
+  </REVIEW>
+</PLASTICQUERY>

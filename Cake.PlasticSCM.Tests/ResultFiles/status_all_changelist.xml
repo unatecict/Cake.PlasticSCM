@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<StatusOutput>
+  <WorkspaceStatus>
+    <Status>
+      <RepSpec>
+        <Server>plastic1:8087</Server>
+        <Name>Cake.PlasticSCM</Name>
+      </RepSpec>
+      <Changeset>123</Changeset>
+    </Status>
+  </WorkspaceStatus>
+  <Changelists>
+    <Changelist>
+      <Name>Merge desde cs:11</Name>
+      <Description>Ficheros cambiados durante el merge</Description>
+      <Changes>
+        <Change>
+          <Type>MV</Type>
+          <Path>moved</Path>
+          <MergesInfo> (Merge de 11)</MergesInfo>
+          <SimilarityPerUnit>0.95</SimilarityPerUnit>
+          <OldPath>aaaa.txt</OldPath>
+        </Change>
+      </Changes>
+    </Changelist>
+  </Changelists>
+</StatusOutput>

@@ -1,0 +1,1 @@
+﻿DIR_CONFLICT[$$]RM_CHG[$$]Conflicto de borrado y cambiado[$$]Un ítem ha sido borrado en el origen y el destino lo ha modificado[$$]Borrado /aaaarg.txt[$$]Modificado /aaaarg.txt[$$]51[$$]False[$$]RM[$$]/aaaarg.txt[$$]CHG[$$]/aaaarg.txt

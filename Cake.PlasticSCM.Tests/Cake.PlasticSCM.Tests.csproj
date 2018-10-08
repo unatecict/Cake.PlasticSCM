@@ -1,0 +1,55 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ResultFiles\checkin_done.txt" />
+    <None Remove="ResultFiles\checkin_merge_needed.txt" />
+    <None Remove="ResultFiles\find_attribute.xml" />
+    <None Remove="ResultFiles\find_branch.xml" />
+    <None Remove="ResultFiles\find_changesets.xml" />
+    <None Remove="ResultFiles\find_label.xml" />
+    <None Remove="ResultFiles\find_merge.xml" />
+    <None Remove="ResultFiles\find_review.xml" />
+    <None Remove="ResultFiles\find_revision.xml" />
+    <None Remove="ResultFiles\merge_with_dir_conflict.txt" />
+    <None Remove="ResultFiles\merge_with_file_conflict.txt" />
+    <None Remove="ResultFiles\merge_with_no_conflict.txt" />
+    <None Remove="ResultFiles\status_all.xml" />
+    <None Remove="ResultFiles\status_all_changelist.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="ResultFiles\checkin_merge_needed.txt" />
+    <EmbeddedResource Include="ResultFiles\checkin_done.txt" />
+    <EmbeddedResource Include="ResultFiles\find_review.xml" />
+    <EmbeddedResource Include="ResultFiles\find_merge.xml" />
+    <EmbeddedResource Include="ResultFiles\find_attribute.xml" />
+    <EmbeddedResource Include="ResultFiles\find_revision.xml" />
+    <EmbeddedResource Include="ResultFiles\find_label.xml" />
+    <EmbeddedResource Include="ResultFiles\find_branch.xml" />
+    <EmbeddedResource Include="ResultFiles\merge_with_file_conflict.txt" />
+    <EmbeddedResource Include="ResultFiles\merge_with_no_conflict.txt" />
+    <EmbeddedResource Include="ResultFiles\merge_with_dir_conflict.txt" />
+    <EmbeddedResource Include="ResultFiles\find_changesets.xml" />
+    <EmbeddedResource Include="ResultFiles\status_all_changelist.xml" />
+    <EmbeddedResource Include="ResultFiles\status_all.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Cake.Core" Version="0.29.0" />
+    <PackageReference Include="Cake.Testing" Version="0.29.0" />
+    <PackageReference Include="nunit" Version="3.10.1" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cake.PlasticSCM\Cake.PlasticSCM.csproj" />
+  </ItemGroup>
+
+</Project>
