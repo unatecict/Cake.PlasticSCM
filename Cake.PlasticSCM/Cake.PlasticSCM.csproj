@@ -2,10 +2,28 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Rubén Ruiz</Authors>
+    <Company>Unatec S.L.</Company>
+    <Description>A cakebuild addin that allows you to work with PlasticSCM</Description>
+    <Version>0.1.0</Version>
+    <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/unatecict/Cake.PlasticSCM</PackageProjectUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/unatecict/Cake.PlasticSCM</RepositoryUrl>
+    <PackageTags>cake cakebuild plastic plasticscm addin</PackageTags>
+    <PackageReleaseNotes>First release. Supports the following plastic commands:
+
+* Add
+* Checkin
+* Find
+* Merge
+* Status
+* Switch
+</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Cake.Core" Version="0.29.0" />
+    <PackageReference Include="Cake.Core" Version="0.30.0" />
   </ItemGroup>
 
 </Project>
