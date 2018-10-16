@@ -4,6 +4,7 @@ using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.PlasticSCM.Runners;
+using EnsureThat;
 
 namespace Cake.PlasticSCM.Switch
 {
@@ -18,11 +19,9 @@ namespace Cake.PlasticSCM.Switch
 
         public void Switch(PlasticSCMSwitchSettings settings)
         {
-            if (settings == null)
-                throw new ArgumentNullException(nameof(settings));
+            Ensure.Any.IsNotNull(settings, nameof(settings));
 
-            if (settings.ObjectSpec == null)
-                throw new ArgumentNullException(nameof(settings.ObjectSpec));
+            Ensure.Any.IsNotNull(settings.ObjectSpec, nameof(settings.ObjectSpec));
 
             var arguments = GetArguments(settings);
             Run(settings, arguments);

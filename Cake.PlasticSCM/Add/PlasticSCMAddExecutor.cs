@@ -4,6 +4,7 @@ using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.PlasticSCM.Runners;
+using EnsureThat;
 
 namespace Cake.PlasticSCM.Add
 {
@@ -20,8 +21,7 @@ namespace Cake.PlasticSCM.Add
 
         public PlasticSCMAddResult Add(PlasticSCMAddSettings settings)
         {
-            if (settings == null)
-                throw new ArgumentNullException(nameof(settings));
+            Ensure.Any.IsNotNull(settings, nameof(settings));
 
             var arguments = GetArguments(settings);
             return Run(settings, arguments, PlasticSCMAddParser.Parse);
@@ -31,8 +31,7 @@ namespace Cake.PlasticSCM.Add
         {
             ProcessArgumentBuilder builder = GetArguments(settings, null);
 
-            if (settings == null)
-                throw new ArgumentNullException(nameof(settings));
+            Ensure.Any.IsNotNull(settings, nameof(settings));
 
             if (settings.Recursive)
                 builder.Append("-R");

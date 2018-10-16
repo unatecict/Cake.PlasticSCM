@@ -5,6 +5,7 @@ using Cake.Core.Diagnostics;
 using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.PlasticSCM.Runners;
+using EnsureThat;
 
 namespace Cake.PlasticSCM.Merge
 {
@@ -28,6 +29,15 @@ namespace Cake.PlasticSCM.Merge
                 {PlasticSCMMergeComparisonMethod.NotIgnore, "NotIgnore"},
             };
 
+
+        private static readonly IDictionary<PlasticSCMMergeResolutionOptions, string> ResolutionOptionsToArgumentMap =
+            new Dictionary<PlasticSCMMergeResolutionOptions, string>()
+            {
+                {PlasticSCMMergeResolutionOptions.KeepDestination, "dst"},
+                {PlasticSCMMergeResolutionOptions.KeepSource, "src"},
+                {PlasticSCMMergeResolutionOptions.Rename, "rename"}
+            };
+
         /// <inheritdoc />
         public PlasticSCMMergeExecutor(IFileSystem fileSystem, ICakeEnvironment environment,
             IProcessRunner processRunner, IToolLocator tools, ICakeLog log) : base(fileSystem, environment, processRunner, tools,
@@ -37,8 +47,7 @@ namespace Cake.PlasticSCM.Merge
 
         public PlasticSCMMergeResult Merge(PlasticSCMMergeSettings settings)
         {
-            if (settings == null)
-                throw new ArgumentNullException(nameof(settings));
+            Ensure.Any.IsNotNull(settings, nameof(settings));
 
             var arguments = GetArguments(settings);
             return Run(settings, arguments, PlasticSCMMergeParser.Parse);
@@ -48,14 +57,17 @@ namespace Cake.PlasticSCM.Merge
         {
             ProcessArgumentBuilder builder = GetArguments(settings, null);
 
-            if (settings == null)
-                throw new ArgumentNullException(nameof(settings));
-
-            if (string.IsNullOrWhiteSpace(settings.SourceObjectSpec))
-                throw new ArgumentException(nameof(settings.SourceObjectSpec));
+            Ensure.Any.IsNotNull(settings, nameof(settings));
+            Ensure.String.IsNotNullOrWhiteSpace(settings.SourceObjectSpec, nameof(settings.SourceObjectSpec));
 
             builder.Append(settings.SourceObjectSpec);
             builder.Append("--nointeractiveresolution");
+
+            if (settings.Session != null)
+            {
+                builder.Append("--solvedconflictsfile=\"{0}\"", settings.Session.SolvedConflictsFilePath);
+                builder.Append("--mergeresultfile=\"{0}\"", settings.Session.MergeResultFile);
+            }
 
             if (!string.IsNullOrWhiteSpace(settings.DestinationObjectSpec))
                 builder.Append("--to={0}", settings.DestinationObjectSpec);
@@ -94,6 +106,22 @@ namespace Cake.PlasticSCM.Merge
             if (!string.IsNullOrWhiteSpace(settings.Comment))
                 builder.Append("-c=\"{0}\"", settings.Comment);
 
+            if (settings.ResolveConflict)
+            {
+                builder.Append("--resolveconflict");
+                Ensure.Comparable.IsGte(settings.ConflictIndex, 0, nameof(settings.ConflictIndex));
+
+                builder.Append("--conflict={0}", settings.ConflictIndex);
+                builder.Append("--resolutionoption={0}", ResolutionOptionsToArgumentMap[settings.ResolutionOptions]);
+
+                if (settings.ResolutionOptions == PlasticSCMMergeResolutionOptions.Rename)
+                    Ensure.String.IsNotNullOrWhiteSpace(settings.ResolutionInfo, nameof(settings.ResolutionInfo));
+
+                builder.Append("--resolutioninfo=\"{0}\"", settings.ResolutionInfo);
+            }
+
+            if (!string.IsNullOrWhiteSpace(settings.Path))
+                builder.AppendQuoted(settings.Path);
 
             return builder;
         }

@@ -7,6 +7,7 @@ using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.PlasticSCM.Common;
 using Cake.PlasticSCM.Runners;
+using EnsureThat;
 
 namespace Cake.PlasticSCM.Find
 {
@@ -34,8 +35,7 @@ namespace Cake.PlasticSCM.Find
 
         public PlasticSCMFindResult Find(PlasticSCMFindSettings settings)
         {
-            if (settings == null)   
-                throw new ArgumentNullException(nameof(settings));
+            Ensure.Any.IsNotNull(settings, nameof(settings));
 
             if (settings.ObjectType == PlasticSCMObjectTypes.ReplicationLog)
                 throw new NotSupportedException("ReplicationLog type not supported yet");

@@ -8,7 +8,6 @@ namespace Cake.PlasticSCM.Merge
         public static PlasticSCMMergeResult Parse(IEnumerable<string> output, string separator)
         {
             PlasticSCMMergeResult result = new PlasticSCMMergeResult();
-            bool stopProcessing = false;
 
             string[] separatorArray = {separator};
             foreach (string line in output)
@@ -19,14 +18,15 @@ namespace Cake.PlasticSCM.Merge
                 switch (parts[0])
                 {
                     case "FILE_CONFLICT":
-                    case "DIR_CONFLICT":
+                        result.FileConflicts.Add(PlasticSCMFileConflict.FromStringValues(parts[1], parts[2], parts[3], parts[4], parts[5]));
                         result.HasConflicts = true;
-                        stopProcessing = true;
+                        break;
+                    case "DIR_CONFLICT":
+                        result.DirectoryConflicts.Add(PlasticSCMDirConflict.FromStringValues(parts[1], parts[2], parts[3], parts[4], parts[5],
+                            parts[6], parts[7], parts[8], parts[9], parts[10], parts[11]));
+                        result.HasConflicts = true;
                         break;
                 }
-
-                if (stopProcessing)
-                    break;
             }
 
             return result;

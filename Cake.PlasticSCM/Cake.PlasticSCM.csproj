@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Rubén Ruiz</Authors>
     <Company>Unatec S.L.</Company>
     <Description>A cakebuild addin that allows you to work with PlasticSCM</Description>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <PackageLicenseUrl>https://opensource.org/licenses/MIT</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/unatecict/Cake.PlasticSCM</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/cake-contrib/graphics/a5cf0f881c390650144b2243ae551d5b9f836196/png/cake-contrib-medium.png</PackageIconUrl>
@@ -20,10 +20,23 @@
 * Status
 * Switch
 </PackageReleaseNotes>
+    <Copyright>Unatec S.L.</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
+    <ModuleFiles Include="$(TargetDir)*.dll" Exclude="$(TargetDir)System*.dll;$(TargetDir)Microsoft*.dll" DestinationPath="$(SolutionDir)Cake.PlasticSCM\bin%(Filename)%(Extension)">
+    </ModuleFiles>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Cake.Core" Version="0.30.0" />
+    <PackageReference Include="Costura.Fody" Version="3.1.4" />
+    <PackageReference Include="Ensure.That" Version="8.0.0" />
+    <PackageReference Include="Fody" Version="3.2.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

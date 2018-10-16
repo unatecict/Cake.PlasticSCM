@@ -6,6 +6,7 @@ using Cake.Core.IO;
 using Cake.Core.Tooling;
 using Cake.PlasticSCM.Merge;
 using Cake.PlasticSCM.Runners;
+using EnsureThat;
 
 namespace Cake.PlasticSCM.Checkin
 {
@@ -38,8 +39,7 @@ namespace Cake.PlasticSCM.Checkin
 
         public PlasticSCMCheckinResult Checkin(PlasticSCMCheckinSettings settings)
         {
-            if (settings == null)
-                throw new ArgumentNullException(nameof(settings));
+            Ensure.Any.IsNotNull(settings, nameof(settings));
 
             var arguments = GetArguments(settings);
             return Run(settings, arguments, PlasticSCMCheckinParser.Parse);
@@ -49,8 +49,7 @@ namespace Cake.PlasticSCM.Checkin
         {
             ProcessArgumentBuilder builder = GetArguments(settings, null);
 
-            if (settings == null)
-                throw new ArgumentNullException(nameof(settings));
+            Ensure.Any.IsNotNull(settings, nameof(settings));
 
             foreach (var path in settings.Paths)
             {
