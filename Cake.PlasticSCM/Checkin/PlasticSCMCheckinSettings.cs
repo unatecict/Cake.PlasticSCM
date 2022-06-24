@@ -10,5 +10,6 @@ namespace Cake.PlasticSCM.Checkin
         public bool All { get; set; } = true;
         public bool Dependencies { get; set; }
         public bool Symlink { get; set; }
+        public bool Private { get; set; }
     }
 }   
