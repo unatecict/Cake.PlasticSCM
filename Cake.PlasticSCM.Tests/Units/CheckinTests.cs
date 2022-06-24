@@ -23,6 +23,7 @@ namespace Cake.PlasticSCM.Tests.Units
                 Comment = "Checkin comment",
                 Symlink = true,
                 NoCheck = true,
+                Private = true
             };
             CheckinFixture fixture = new CheckinFixture("merge_with_dir_conflict.txt")
             {
@@ -40,6 +41,7 @@ namespace Cake.PlasticSCM.Tests.Units
             Assert.That(result.Args, Does.Contain("--nchk"));
             Assert.That(result.Args, Does.Contain($"-c=\"{settings.Comment}\""));
             Assert.That(result.Args, Does.Contain("--machinereadable"));
+            Assert.That(result.Args, Does.Contain("--private"));
 
         }
 

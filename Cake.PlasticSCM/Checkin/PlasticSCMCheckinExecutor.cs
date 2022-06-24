@@ -68,6 +68,9 @@ namespace Cake.PlasticSCM.Checkin
             if (settings.NoCheck)
                 builder.Append("--nchk");
 
+            if (settings.Private)
+                builder.Append("--private");
+            
             if (!string.IsNullOrWhiteSpace(settings.Comment))
                 builder.Append("-c=\"{0}\"", settings.Comment);
 
